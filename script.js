@@ -17,11 +17,11 @@ createGrid()
 
 
 const pixel = document.querySelector("div");
-const mouseOut = (event) => {
+const mouseOver = (event) => {
     event.target.style.backgroundColor = "red";
 }
 
-pixel.addEventListener("mouseout", mouseOut);
+pixel.addEventListener("mouseover", mouseOver);
 
 
 
