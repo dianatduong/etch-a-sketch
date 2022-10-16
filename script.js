@@ -1,7 +1,8 @@
 const container = document.querySelector(".container");
 container.style.display = "grid";
 container.style.height = "20px";
-
+//container.gridTemplateColumns = "repeat(16,30px)";
+//container.gridTemplateRows = "repeat(16,30px)";
 
 const createGrid = () => {
 
