@@ -1,8 +1,7 @@
 const container = document.querySelector(".container");
 container.style.display = "grid";
 container.style.height = "20px";
-//container.gridTemplateColumns = "repeat(16, 30px)";
-//container.gridTemplateRows = "repeat(16, 30px)";
+
 
 const createGrid = () => {
 
@@ -17,20 +16,12 @@ const createGrid = () => {
 createGrid()
 
 
-//const square = document.querySelector(".grid");
-
 const pixel = document.querySelector("div");
-
-const mouseOver = (event) => {
+const mouseOut = (event) => {
     event.target.style.backgroundColor = "red";
 }
 
-//const mouseOut = () => {
-  //  pixel.style.backgroundColor = "green";
-//}
+pixel.addEventListener("mouseout", mouseOut);
 
-
-pixel.addEventListener("click", mouseOver);
-//pixel.addEventListener("click", mouseOver);
 
 
