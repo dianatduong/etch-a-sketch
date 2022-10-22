@@ -1,8 +1,9 @@
 const container = document.querySelector(".container");
 container.style.display = "grid";
 container.style.height = "20px";
-//container.gridTemplateColumns = "repeat(16,30px)";
-//container.gridTemplateRows = "repeat(16,30px)";
+container.style.gridTemplateColumns = "repeat(16,30px)";
+container.style.gridTemplateRows = "repeat(16,30px)";
+
 
 const createGrid = () => {
 
@@ -14,15 +15,14 @@ const createGrid = () => {
     }
 }
 
+
 createGrid()
 
-
-const pixel = document.querySelector("div");
 const mouseOver = (event) => {
     event.target.style.backgroundColor = "red";
 }
 
-pixel.addEventListener("mouseover", mouseOver);
+container.addEventListener("mouseover", mouseOver);
 
 
 
