@@ -8,6 +8,7 @@
    
 </head>
 <body>
+    <section>
     <div class="header">
         <h1>Etch-A-Sketch</h1>
     </div>
@@ -15,17 +16,27 @@
     <div class="container">
     </div>
 
-    <div class=""buttons">
+    <div class="buttons">
     </div>
-
+</section>
     <style>
+        section {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
         .header {
            text-align: center;
+           order: 1;
         }
-        
-        .container {
-            width:100%;
-            justify-content: center;
+
+      .container {
+         order: 2;
+      }
+
+        .buttons {
+           order: 3;
         }
     </style>
     <script src="script.js"></script>

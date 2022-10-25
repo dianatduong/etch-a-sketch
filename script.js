@@ -1,41 +1,40 @@
+const header = document.querySelector(".header");
 const container = document.querySelector(".container");
+const div = document.querySelector("div");
+
+const btnClear = document.createElement("button");
+const btnRed = document.createElement("button");
+const btnRGB = document.createElement("button");
+const btnSize = document.createElement("button");
+const buttonsContainer = document.querySelector(".buttons")
+btnClear.textContent = "Clear";
+btnRed.textContent = "Red";
+btnRGB.textContent = "RGB";
+btnSize.textContent = "Size";
+buttonsContainer.appendChild(btnClear)
+buttonsContainer.appendChild(btnRed)
+buttonsContainer.appendChild(btnRGB)
+buttonsContainer.appendChild(btnSize)
+
+
 container.style.display = "grid";
 container.style.height = "20px";
-container.style.gridTemplateColumns = "repeat(16,30px)";
-container.style.gridTemplateRows = "repeat(16,30px)";
 
 
-const button = document.createElement("button");
-const grid = document.querySelectorAll("div")
 
-container.after(button)
-button.textContent = "Clear";
-
-
-const createGrid = () => {
-    for(let i =0; i < 256; i++) {
+const createGrid = (row, column) => {
+    for(let i =0; i < (row * column); i++) {
         const div = document.createElement("div");
-        div.className = "grid";
+       
         div.style.border = "2px solid black";
-        container.append(div);
+       
+        container.style.gridTemplateColumns = `repeat(${column}, 30px)`;
+        container.style.gridTemplateRows = `repeat(${row}, 30px)`;
+        container.appendChild(div).className = "grid";
     }
 }
 
 
-const mouseOver = (event) => {
-    event.target.style.backgroundColor = "red";
-}
 
+createGrid(16, 16)
 
-const clearGrid = () => {
-
-
-}
-
-
-createGrid()
-
-
-button.addEventListener("click", clearGrid)
-
-container.addEventListener("mouseover", mouseOver);
