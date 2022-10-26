@@ -1,6 +1,6 @@
 const header = document.querySelector(".header");
 const container = document.querySelector(".container");
-const div = document.querySelector("div");
+
 
 const btnClear = document.createElement("button");
 const btnRed = document.createElement("button");
@@ -17,24 +17,33 @@ buttonsContainer.appendChild(btnRGB)
 buttonsContainer.appendChild(btnSize)
 
 
-container.style.display = "grid";
-container.style.height = "20px";
+
 
 
 
 const createGrid = (row, column) => {
+
     for(let i =0; i < (row * column); i++) {
+
         const div = document.createElement("div");
-       
         div.style.border = "2px solid black";
-       
+
+        container.style.display = "grid";
+        container.style.height = "20px";
         container.style.gridTemplateColumns = `repeat(${column}, 30px)`;
         container.style.gridTemplateRows = `repeat(${row}, 30px)`;
+
         container.appendChild(div).className = "grid";
     }
 }
 
+const mouseDown = (event) => {
+    event.target.style.backgroundColor = "red";
+}
 
+//button.addEventListener("click", clearGrid)
+
+container.addEventListener("mousedown", mouseDown);
 
 createGrid(16, 16)
 
