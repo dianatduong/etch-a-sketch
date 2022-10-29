@@ -4,17 +4,19 @@ const btnEraser = document.createElement("button");
 const btnRed = document.createElement("button");
 const btnRGB = document.createElement("button");
 const btnSize = document.createElement("button");
+const btnClearAll = document.createElement("button");
 const buttonsContainer = document.querySelector(".buttons")
 btnEraser.textContent = "Eraser";
 btnRed.textContent = "Red";
 btnRGB.textContent = "Rainbow";
 btnSize.textContent = "Size";
+btnClearAll.textContent = "Clear";
 
-header.appendChild(buttonsContainer)
 buttonsContainer.appendChild(btnRed)
 buttonsContainer.appendChild(btnRGB)
 buttonsContainer.appendChild(btnSize)
 buttonsContainer.appendChild(btnEraser)
+buttonsContainer.appendChild(btnClearAll)
 
 
 
@@ -44,7 +46,7 @@ createGrid(16, 16)
 //Red Button
 const redColor = () => {
     const red = (event) => {
-        event.target.style.backgroundColor = "red";
+        event.target.style.backgroundColor = "rgb(255,0,0)";
     }
     container.addEventListener("mouseover", red); 
 }
@@ -55,7 +57,7 @@ btnRed.addEventListener("click", redColor);
 //Eraser Button
 const clearGrid = () => {
     const eraser = (event) => {
-        event.target.style.backgroundColor = "white";
+        event.target.style.backgroundColor = "rgb(255,255,255)";
     }
     container.addEventListener("mouseover", eraser);
 }
@@ -73,3 +75,13 @@ const randomColor = () => {
     }
     btnRGB.addEventListener("click", randomColor);
         
+
+
+//Clear Button
+const clearAll = () => {
+    document.querySelectorAll('.grid').forEach(element =>
+        element.style.backgroundColor = "transparent"
+    )
+}
+btnClearAll.addEventListener("click", clearAll);
+
