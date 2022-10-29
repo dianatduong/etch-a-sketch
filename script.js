@@ -20,27 +20,24 @@ buttonsContainer.appendChild(btnReset)
 
 
 
+const createGrid = (column, row) => {
 
-
-
-const createGrid = (row, column) => {
-
-    for(let i =0; i < (row * column); i++) {
+    for(let i =0; i < (column * row); i++) {
 
         const div = document.createElement("div");
-        div.style.border = "0 solid white";
 
+        div.style.border = "0 solid white";
         container.style.display = "grid";
-       
-        container.style.gridTemplateColumns = `repeat(${column}, 30px)`;
+
         container.style.gridTemplateRows = `repeat(${row}, 30px)`;
+        container.style.gridTemplateColumns = `repeat(${column}, 30px)`;
 
         container.appendChild(div).className = "grid";
     }
 }
 
 
-createGrid(16, 16)
+createGrid(25, 16)
 
 
 //Red Button
