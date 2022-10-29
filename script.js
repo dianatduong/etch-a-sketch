@@ -7,7 +7,7 @@ const btnSize = document.createElement("button");
 const buttonsContainer = document.querySelector(".buttons")
 btnEraser.textContent = "Eraser";
 btnRed.textContent = "Red";
-btnRGB.textContent = "RGB";
+btnRGB.textContent = "Rainbow";
 btnSize.textContent = "Size";
 
 buttonsContainer.appendChild(btnRed)
@@ -25,7 +25,7 @@ const createGrid = (row, column) => {
     for(let i =0; i < (row * column); i++) {
 
         const div = document.createElement("div");
-        div.style.border = "2px solid black";
+        div.style.border = "0 solid white";
 
         container.style.display = "grid";
         container.style.height = "20px";
