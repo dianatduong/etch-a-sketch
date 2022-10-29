@@ -4,19 +4,19 @@ const btnEraser = document.createElement("button");
 const btnRed = document.createElement("button");
 const btnRGB = document.createElement("button");
 const btnSize = document.createElement("button");
-const btnClearAll = document.createElement("button");
+const btnReset = document.createElement("button");
 const buttonsContainer = document.querySelector(".buttons")
 btnEraser.textContent = "Eraser";
 btnRed.textContent = "Red";
 btnRGB.textContent = "Rainbow";
 btnSize.textContent = "Size";
-btnClearAll.textContent = "Clear";
+btnReset.textContent = "Reset";
 
 buttonsContainer.appendChild(btnRed)
 buttonsContainer.appendChild(btnRGB)
 buttonsContainer.appendChild(btnSize)
 buttonsContainer.appendChild(btnEraser)
-buttonsContainer.appendChild(btnClearAll)
+buttonsContainer.appendChild(btnReset)
 
 
 
@@ -63,6 +63,8 @@ const clearGrid = () => {
 }
 btnEraser.addEventListener("click", clearGrid);
 
+
+
 //Random color generator
 const randomColor = () => {
     const generateColor = (event) => {
@@ -77,11 +79,11 @@ const randomColor = () => {
         
 
 
-//Clear Button
-const clearAll = () => {
+//Reset Button
+const reset = () => {
     document.querySelectorAll('.grid').forEach(element =>
         element.style.backgroundColor = "transparent"
     )
 }
-btnClearAll.addEventListener("click", clearAll);
+btnReset.addEventListener("click", reset);
 
