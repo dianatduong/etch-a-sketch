@@ -82,3 +82,12 @@ const reset = () => {
 }
 btnReset.addEventListener("click", reset);
 
+
+//footer
+const footer = document.querySelector(".footer");
+const footerInfo = document.createElement("p");
+const date = new Date().getFullYear();
+footerInfo.textContent = "© Diana Duong " + date;
+footer.appendChild(footerInfo)
+
+
