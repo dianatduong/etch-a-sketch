@@ -48,3 +48,14 @@ const redColor = () => {
     container.addEventListener("mouseover", red); 
 }
 btnRed.addEventListener("click", redColor);
+
+
+
+//Eraser Button
+const clearGrid = () => {
+    const eraser = (event) => {
+        event.target.style.backgroundColor = "white";
+    }
+    container.addEventListener("mouseover", eraser);
+}
+btnEraser.addEventListener("click", clearGrid);
