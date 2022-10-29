@@ -48,28 +48,3 @@ const redColor = () => {
     container.addEventListener("mouseover", red); 
 }
 btnRed.addEventListener("click", redColor);
-
-
-//Eraser Button
-const clearGrid = () => {
-    const eraser = (event) => {
-        event.target.style.backgroundColor = "white";
-    }
-    container.addEventListener("mouseover", eraser);
-}
-btnEraser.addEventListener("click", clearGrid);
-
-//Random color generator
-const randomColor = () => {
-    const generateColor = (event) => {
-        const a = Math.floor(Math.random() * 255);
-        const b = Math.floor(Math.random() * 255);
-       const c =  Math.floor(Math.random() * 255);
-        event.target.style.backgroundColor = `rgb(${a}, ${b}, ${c})`;
-    }
-        container.addEventListener("mouseover", generateColor);
-    }
-    btnRGB.addEventListener("click", randomColor);
-        
-    
-
