@@ -9,12 +9,10 @@ const buttonsContainer = document.querySelector(".buttons")
 btnEraser.textContent = "Eraser";
 btnRed.textContent = "Red";
 btnRGB.textContent = "Rainbow";
-btnSize.textContent = "Size";
 btnReset.textContent = "Reset";
 
 buttonsContainer.appendChild(btnRed)
 buttonsContainer.appendChild(btnRGB)
-buttonsContainer.appendChild(btnSize)
 buttonsContainer.appendChild(btnEraser)
 buttonsContainer.appendChild(btnReset)
 
