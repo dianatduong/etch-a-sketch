@@ -10,6 +10,7 @@ btnRed.textContent = "Red";
 btnRGB.textContent = "Rainbow";
 btnSize.textContent = "Size";
 
+header.appendChild(buttonsContainer)
 buttonsContainer.appendChild(btnRed)
 buttonsContainer.appendChild(btnRGB)
 buttonsContainer.appendChild(btnSize)
@@ -28,7 +29,7 @@ const createGrid = (row, column) => {
         div.style.border = "0 solid white";
 
         container.style.display = "grid";
-        container.style.height = "20px";
+       
         container.style.gridTemplateColumns = `repeat(${column}, 30px)`;
         container.style.gridTemplateRows = `repeat(${row}, 30px)`;
 
